@@ -1,0 +1,10 @@
+{
+  "name": "mini-crm-root",
+  "private": true,
+  "workspaces": ["client", "server", "shared"],
+  "scripts": {
+    "install:all": "npm --workspaces install",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev"
+  }
+}

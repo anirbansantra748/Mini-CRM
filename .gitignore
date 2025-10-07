@@ -1,0 +1,22 @@
+# Node
+node_modules/
+
+# Env files
+.env
+**/.env
+
+# Docker local data
+/dev/mongo-data/
+
+# Build
+server/dist/
+client/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.DS_Store
