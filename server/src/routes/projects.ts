@@ -107,7 +107,7 @@ router.patch('/:id/members', authMiddleware, async (req, res) => {
   const existing = await Project.findById(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
   const before = existing.toObject();
-  existing.members = Array.isArray(memberIds) ? memberIds : [];
+  existing.members = Array.isArray(memberIds) ? (memberIds as any) : ([] as any);
   await existing.save();
   const after = existing.toObject();
   const diff = diffObjects(before, after);
